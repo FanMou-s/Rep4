@@ -24,11 +24,11 @@ public class GC_FinalizeTest01 {
         System.gc();
         //finalizer方法优先级低，暂停等待
         Thread.sleep(1000);
-        if(SAVE_HOOK!=null){
+        /*if(SAVE_HOOK!=null){
             SAVE_HOOK.isAlive();
         }else{
             System.out.println("No,I am dead :(");
-        }
+        }*/
 
         //如果成功，尝试第二次拯救自己
         SAVE_HOOK=null;
