@@ -13,7 +13,7 @@ public class GC_FinalizeTest01 {
     @Override
     protected void finalize() throws Throwable {
         super.finalize();
-        System.out.println("finalize method executed! test01");
+        System.out.println("finalize method executed! test01ppp");
         GC_FinalizeTest01.SAVE_HOOK=this;
     }
 
