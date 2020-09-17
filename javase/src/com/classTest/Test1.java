@@ -19,7 +19,7 @@ public class Test1 {
         for(File theFile:files){
             reader=new BufferedReader(new FileReader(theFile));
             while((str=reader.readLine())!=null){
-                String[] temStr=str.trim().split(" |,|.|;|!");
+                String[] temStr=str.trim().split(" |,|.|;|!|(|)");
                 for(String str1:temStr)
                     words.put(str1,count++);
             }
@@ -28,7 +28,7 @@ public class Test1 {
                 reader=new BufferedReader(new FileReader(theFile1));
                 LinkedHashMap<Integer,Integer> tmpMap=new LinkedHashMap<Integer,Integer>();
                 while((str=reader.readLine())!=null){
-                    String[] temStr=str.trim().split(" |,|.|;|!");
+                    String[] temStr=str.trim().split(" |,|.|;|!|(|)");
                     for(String str1:temStr){
                         if(words.containsKey(str1)){
 
